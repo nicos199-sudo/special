@@ -1,0 +1,29 @@
+
+
+body{
+    background-color: #ebeff5;
+    
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 232px;
+    background-color: white;
+}
+
+#total-orders{
+    background-color: #4cb4c7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+#orders-delivered{
+    background-color: #7abecc;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#orders-pending{
+    background-color: #7CD1C0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

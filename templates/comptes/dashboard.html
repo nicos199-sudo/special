@@ -1,0 +1,67 @@
+{%  extends 'comptes/main.html' %}
+
+{% block content %}
+
+{%  include 'comptes/status.html' %}
+
+<br>
+
+<div class="row">
+	<div class="col-md-5">
+		<h5>CLIENTS:</h5>
+		<hr>
+		<div class="card card-body">
+			<a class="btn btn-primary  btn-sm btn-block" href="">Creer Client</a>
+			<table class="table table-sm">
+				<tr>
+					<th></th>
+					<th>Client</th>
+					<th>Phone</th>
+				</tr>
+
+				{% for client in clients %}
+					<tr>
+						<td><a class="btn btn-sm btn-info" href="{% url 'client' client.id %}">View</a></td>
+						<td>{{client.nom}}</td>
+						<td>{{client.phone}}</td>
+					</tr>
+				{% endfor %}
+
+			</table>
+		</div>
+	</div>
+
+	<div class="col-md-7">
+		<h5>5 DERNIERES COMMANDES</h5>
+		<hr>
+		<div class="card card-body">
+			
+			<table class="table table-sm">
+				<tr>
+					<th>Produit</th>
+					<th>Date de la commande</th>
+					<th>Status</th>
+					<th>Modifier</th>
+					<th>Supprimer</th>
+				</tr>
+
+				{% for commande in commandes %}
+					<tr>
+						<td>{{commande.produit}}</td>
+						<td>{{commande.date_created}}</td>
+						<td>{{commande.status}}</td>
+						<td><a class="btn btn-sm btn-info" href="{% url 'modifier_commande' commande.id %}">Modifier</a></td>
+						<td><a class="btn btn-sm btn-danger" href="{% url 'supprimer_commande' commande.id %}">Supprimer</a></td>
+
+					</tr>
+				{% endfor %}
+
+		
+			</table>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}
+
